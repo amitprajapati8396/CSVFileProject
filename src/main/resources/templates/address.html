@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>address</title>
+</head>
+<body style="background-color:Lightskyblue">
+
+     <div> 
+      
+      <h1>ADDRESS LIST</h1>
+      <hr>
+      <table border="1" style="color:solidblack" class="center">
+    <tr>
+        <th>ADDRESS_ID</th>
+        <th>ADDRESS_LINE1</th>
+        <th>ADDRESS_LINE2</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>COUNTRY</th> 
+        <th>POSTAL NUMBER</th>
+        
+        
+    </tr>
+    
+    <tr th:each = "addr: ${address}">
+        <td th:text="${addr.id}"></td>
+        <td th:text="${addr.line1}"></td>
+        <td th:text="${addr.line2}"></td>
+        <td th:text="${addr.city}"></td>
+        <td th:text="${addr.state}"></td>
+        <td th:text="${addr.country}"></td>
+        <td th:text="${addr.postalno}"></td>
+        
+    </tr>
+    </table>
+     
+    </div>
+    <br><br>
+      <div style="text-align:center">
+      <a th:href="@{/users}"> user  </a>|
+      <a th:href="@{/home}"> home</a>
+      </div>
+    
+</body>
+</html>
